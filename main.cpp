@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//Print the input string in reverse
+//Prints the input string in reverse
 
 void printReverse(string input) {
     if (input.length() != 0) {
