@@ -1,26 +1,20 @@
 #include <iostream>
-#include <string>
-#include <cstdio>
 
 using namespace std;
 
-void reverseString(string &s) {
-    int n = s.length();
-    int left = 0;
-    int right = n-1;
-    while (left < right) {
-        s[right] = s[right]+s[left];
-        s[left] = s[right]-s[left];
-        s[right] = s[right]-s[left];
-        left++;
-        right--;
+//Prints out the reverse of the input string
+
+void printReverse(string input) {
+    if (input.length() != 0) {
+        cout << input[input.length()-1];
+        printReverse(input.substr(0,input.length()-1));
     }
+    return;
 }
 
 int main() {
-    string s1;
-    cin >> s1;
-    reverseString(s1);
-    cout << s1;
+    string input;
+    cin >> input;
+    printReverse(input);
     return 0;
 }
